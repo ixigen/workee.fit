@@ -1,19 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Categories from './categories/Categories';
 import './App.css';
 
-class App extends Component {
+const App = React.createClass({
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <h2>Workee.fit</h2>
-        </div>
-        <p className="App-intro">
-          
-        </p>
+      <div>
+        <h1>Workee.fit</h1>
+        
+        <Categories />
       </div>
     );
   }
-}
+})
 
 export default App;
