@@ -1,11 +1,14 @@
 import React from 'react';
-// import ExerciseCard from './ExerciseCard';
+import ExerciseCard from './ExerciseCard';
 
 const ExerciseList = React.createClass({
     render() {
+        const { exercises }  = this.props;
         return (
             <div>
-                { /* this.props.exercises.map(exercise => <ExerciseCard title={ exercise }/>) */ }
+                { 
+                    exercises.map((exercise, i) => (<ExerciseCard key={i} {...exercise} />))
+                }
             </div>
         );
     },
