@@ -16,10 +16,20 @@ const App = React.createClass({
       <div>
         <h1>Workee.fit</h1>
         <Search />
-        <ExerciseList />
+        <ExerciseList { ...this.props }/>
       </div>
     );
   }
 })
 
-export default connect()(App);
+const mapStateToProps = (state, ownProps) => {
+  const { exercises } = state || {
+    exercises: [],
+  };
+
+  return {
+    exercises,
+  };
+};
+
+export default connect(mapStateToProps)(App);
