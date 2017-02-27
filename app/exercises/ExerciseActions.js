@@ -16,5 +16,5 @@ export const fetchExercises = () => dispatch => {
     dispatch(requestExercises());
     return fetch('../resources/data/exercises.json')
         .then(response => response.json())
-        .then(json => dispatch(receiveExercises(json)))
-}
+        .then(json => dispatch(receiveExercises(json)));
+};
