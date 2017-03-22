@@ -1,0 +1,47 @@
+.search-wrapper {
+    box-sizing: border-box;
+    margin: 20px;
+}
+
+.search-field {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    outline: 1px solid #eee;
+    border: none;
+    font-size: 2em;
+    transition: background-color .3s ease-in-out;
+}
+
+.search-field:focus {
+    background-color: #eee;
+}
+
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+.example-appear {
+  opacity: 0.01;
+}
+
+.example-appear.example-appear-active {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}

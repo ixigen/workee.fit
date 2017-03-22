@@ -1,35 +1,42 @@
 [
     {
+        "id": "neck",
         "name": "Neck",
-        "exercises": ["stretch"],
+        "exercises": ["stretch", "compress"],
         "description": "Exercises and stretching routines to alleviate the pain in your neck."
     },
     {
+        "id": "shoulders",
         "name": "Shoulders",
         "exercises": ["stretch"],
         "description": "Stretching routines to get rid of minor shoulder pain"
     },
     {
+        "id": "arms",
         "name": "Arms",
         "exercises": ["stretch"],
         "description": "Anything from warm-up to stretching for your arms"
     },
     {
+        "id": "back",
         "name": "Back",
         "exercises": ["stretch"],
         "description": "Get rid of the imprint your chair left on your spine."
-    }, 
+    },
     {
+        "id": "hips",
         "name": "Hips",
         "exercises": ["stretch"],
         "description": "Stretch and regain hip flexibility with these amazing exercises"
     },
     {
+        "id": "knees",
         "name": "Knees",
         "exercises": ["stretch"],
         "description": "Good for your knees. Get rid of the knee stings."
     },
     {
+        "id": "Ankles",
         "name": "Ankles",
         "exercises": ["stretch"],
         "description": "Something for the ankles too."

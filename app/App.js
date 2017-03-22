@@ -1,34 +1,44 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Search from './search/Search';
-import ExerciseList from './exercises/ExerciseList';
-import { fetchExercises } from './exercises/ExerciseActions';
+
+import { Route } from 'react-router';
+
+import TopBar from 'top-bar/TopBar';
+import Footer from 'footer/Footer';
+import Navigation from 'Navigation';
+
+import Stretches from './stretches/Stretches';
+import Workouts from './workouts/Workouts';
+
+import './App.css';
 
 const App = React.createClass({
-  
-  componentDidMount() {
-    const { dispatch } = this.props;
-    dispatch(fetchExercises());
-  },
-  
+
   render() {
+    const title="Workee.fit"
     return (
-      <div>
-        <h1>Workee.fit</h1>
-        <Search />
-        <ExerciseList { ...this.props }/>
+      <div className="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+          <TopBar title={title} />
+          <Navigation title={title}/>
+
+          <div className="mdl-layout__content">
+            <Route path="/stretching" component={Stretches} />
+            <Route path="/workout" component={Workouts} />
+          </div>
+
+          <Footer />
       </div>
     );
   }
 })
 
 const mapStateToProps = (state, ownProps) => {
-  const { exercises } = state || {
-    exercises: [],
+  const { query } = state || {
+    query: 'ALL',
   };
 
   return {
-    exercises,
+    query,
   };
 };
 
