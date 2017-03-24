@@ -5,6 +5,13 @@ import {fetchWorkouts} from './workoutActions';
 
 import Search from 'search/Search';
 import Workout from './Workout';
+import NoData from './NoData'
+
+const WorkoutsList = ({workouts}) => (
+    <div className="mdl-grid">
+        {workouts.map((workout, i) => (<Workout key={i} {...workout} />))}
+    </div>
+);
 
 const Workouts = React.createClass({
     componentWillMount() {
@@ -14,14 +21,24 @@ const Workouts = React.createClass({
 
     render() {
         const {workouts} = this.props;
+        const isDataAvailable = workouts.length > 0;
+
         return(
             <div>
-                <Search
-                    placeholderText="What's your setup?"
-                    {...this.props} />
-                <div className="mdl-grid">
-                    {workouts.map((workout, i) => (<Workout key={i} {...workout} />))}
-                </div>
+                {
+                    isDataAvailable && (
+                        <div>
+                            <Search
+                                placeholderText="What are you looking for?"
+                                {...this.props} />
+                            <WorkoutsList {...this.props} />
+                        </div>
+                        )
+                }
+
+                {
+                    !isDataAvailable && <NoData />
+                }
 
                 <Route path="/workout/:id" component={Workout} />
             </div>

@@ -66,7 +66,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "precache": "sw-precache --root build --config app/sw-precache-config.json && cp app/runtime-caching.js build/ && cp node_modules/sw-toolbox/sw-toolbox.js build/"
   },
   "jest": {
     "collectCoverageFrom": [

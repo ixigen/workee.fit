@@ -1,4 +1,6 @@
 .workout-image {
-    width: 50%;
+    display: inline-block;
+    margin: auto;
+    width: auto;
     height: auto;
 }

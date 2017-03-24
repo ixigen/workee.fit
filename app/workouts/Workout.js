@@ -9,7 +9,6 @@ const Workout = ({ name, imageUrl, pdfSource, description }) => {
             </div>
             <div className="mdl-card__supporting-text mdl-grid">
                 <img className="workout-image mdl-cell mdl-cell--5-col" src={`${imageUrl}`} alt={name}/>
-                <div className="mdl-cell mdl-cell--5-col">{description}</div>
             </div>
             <div className="mdl-card__actions mdl-card--border">
                 <a href={`/workout/${name.split(' ').join('-')}`} className="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">

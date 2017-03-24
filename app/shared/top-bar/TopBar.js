@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import 'material-design-lite/material.min.css';
 import 'material-design-lite/material.min.js';
 import './TopBar.css';

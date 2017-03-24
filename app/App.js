@@ -14,6 +14,7 @@ const App = React.createClass({
 
   render() {
     const title="Workee.fit"
+
     return (
       <div className="mdl-layout mdl-js-layout mdl-layout--fixed-header">
           <TopBar title={title} />
