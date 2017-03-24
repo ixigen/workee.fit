@@ -1,13 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { Route } from 'react-router';
-
+// Common / shared modules
 import TopBar from 'top-bar/TopBar';
 import Footer from 'footer/Footer';
 import Navigation from 'Navigation';
 
-import Stretches from './stretches/Stretches';
 import Workouts from './workouts/Workouts';
 
 import './App.css';
@@ -22,8 +20,7 @@ const App = React.createClass({
           <Navigation title={title}/>
 
           <div className="mdl-layout__content">
-            <Route path="/stretching" component={Stretches} />
-            <Route path="/workout" component={Workouts} />
+            <Workouts />
           </div>
 
           <Footer />
