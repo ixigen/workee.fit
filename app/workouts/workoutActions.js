@@ -17,6 +17,7 @@ export const receiveWorkouts = (workouts) => ({
 export const fetchWorkouts = _ => dispatch => {
     dispatch(requestWorkouts());
     return fetch('/workouts.json')
+
         .then(response => response.json())
         .then(json => dispatch(receiveWorkouts(json)));
 };
