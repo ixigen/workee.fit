@@ -3,7 +3,7 @@ import './Workout.css';
 
 const Workout = ({ name, imageUrl, pdfSource, description }) => {
     return(
-<div className="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-card mdl-shadow--2dp">
+        <div className="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-card mdl-shadow--2dp">
             <div className="mdl-card__title mdl-card--expand">
                 <h2 className="mdl-card__title-text" style={{textTransform: 'capitalize'}}>{name}</h2>
             </div>
